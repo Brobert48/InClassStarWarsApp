@@ -66,11 +66,13 @@
     // Question: What does this code do?
     $("#add-btn").on("click", function(event) {
       event.preventDefault();
+      var age = $("#age").val().trim();
+      var forcePoints = $("#force-points").val().trim()
       var newCharacter = {
         name: $("#name").val().trim(),
         role: $("#role").val().trim(),
-        age: pareInt($("#age").val().trim()),
-        forcePoints: pareInt($("#force-points").val().trim())
+        age: parseInt(age),
+        forcePoints: parseInt(forcePoints)
       };
 
       // Question: What does this code do??
